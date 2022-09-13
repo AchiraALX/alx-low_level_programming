@@ -1,4 +1,5 @@
 #include <main.h>
+#include <stdio.h>
 /**
  * Main - the main block
  * Return : Always 0 (Success)
