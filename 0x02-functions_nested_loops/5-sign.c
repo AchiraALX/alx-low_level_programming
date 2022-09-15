@@ -1,7 +1,7 @@
 #include "main.h"
 
-/** 
- * print_sign - Print the sign of a given number
+/**
+ * print_sign - Prints the sign of a nummber
  * @n: type int
  * Return: Always 0 (Success)
  */
@@ -9,12 +9,18 @@
 int print_sign(int n)
 {
 	if (n > 0)
+	{
 		_putchar('+');
 		return (1);
-	else if (n < 0)
-		_putchar('-');
-		return (0);
-	else
+	}
+	else if (n == 0)
+	{
 		_putchar('0');
 		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
