@@ -13,7 +13,7 @@ void print_to_98(int n)
 
 	while (x >= n && x <=98)
 	{
-		printf("%i, ");
+		printf(x, ", ");
 		x++;
 	}
 }
