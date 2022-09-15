@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - Returns 1 if the character is a an alpha and 0 if otherwise.
+ * @c: type int char
  * Return:Always 0 (Success)
  */
 
