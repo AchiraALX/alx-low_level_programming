@@ -5,10 +5,9 @@
  */
 void jack_bauer(void)
 {
-	int t = 0;
 	int a = 0, b = 0, c = 0, d = 0;
 
-	for (t < (60 * 24))
+	for (int t = 0; t < (60 * 24); t++)
 	{
 		_putchar(a + '0');
 		_putchar(b + '0');
@@ -33,6 +32,5 @@ void jack_bauer(void)
 			b = 0;
 			a++;
 		}
-		x++;
 	}
 }
