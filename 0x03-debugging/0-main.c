@@ -5,12 +5,12 @@
  * Return: Always 0 (Success)
  */
 
-int main(void0
+int main(void)
 {
 	int i;
 
 	i = 98;
-	
+
 	positive_or_negative(i);
 
 	Return (0);
