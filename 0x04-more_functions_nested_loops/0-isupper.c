@@ -2,7 +2,7 @@
 
 /**
  * _issupper - Will check if the given char c is upper
- * @c: Type char character
+ * @c: Type int number
  * Return: Always 0 (Success)
  */
 
@@ -10,10 +10,10 @@ int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
-		return 1;
+		return (1);
 	}
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
