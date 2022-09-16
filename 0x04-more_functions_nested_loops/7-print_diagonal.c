@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_diagonal - draw a diagonal line
+ * print_diagonal - park '\' diagnolly
  * @n: number of times the '\' char is printed
  * Description: Can only use _putchar to print
+ * Return: Always 0 (Success)
  */
 void print_diagonal(int n)
 {
