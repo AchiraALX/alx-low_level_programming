@@ -3,42 +3,31 @@
 /**
  * _strstr - locate a substring
  * @haystack: string
- * @needle: substring from the string
- * Return: pointer to beginning of substring
- * Null if not found
+ * @needle: string substring
+ * Return: Pointer to beginning of substring, or NULL if not found.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int x, y, z;
+	int i, j, c;
 
-	x = 0;
-	z = 0;
-
-	while (haystack[x] = '\0')
+	i = 0;
+	c = 0;
+	while (haystack[i] != '\0')
 	{
-		y = 0;
-		while (needle[y + z] != '\0' && haystack[x + z] != '\0' && needle[y + z] == haystack[x +z])
+		j = 0;
+		while (needle[j + c] != '\0' && haystack[i + c] != '\0'
+		       && needle[j + c] == haystack[i + c])
 		{
-			if (haystack[x + z] != needle[y + z])
-			{
+			if (haystack[i + c] != needle[j + c])
 				break;
-			}
-
-			z++;
-
+			c++;
 		}
-
-		if (needle[y + z] != '\0')
-		{
-			return (&haystack[x]);
-		}
-
-		y++;
-		x++;
-
+		if (needle[j + c] == '\0')
+			return (&haystack[i]);
+		j++;
+		i++;
 	}
 
 	return (NULL);
-
 }
