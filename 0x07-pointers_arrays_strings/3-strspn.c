@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * int_strspn - gets the lenght of a prefix substring
+ * _strspn - search a string for a set of bytes
  * @s: char string array
  * @accept: char array to check bytes with
- * Return: Number of bytes in the initial segment of 's'
+ * Return: Number of bytes in the intial segment of `s`
  */
 
-unsigned int_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	int i;
 	int j;
-	int y;
+	int c;
 
 	i = 0;
-	y = 0;
+	c = 0;
 
 	while (s[i] != '\0')
 	{
@@ -23,22 +23,14 @@ unsigned int_strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				y++;
+				c++;
 				break;
 			}
-
 			j++;
-
 		}
-
 		if (accept[j] == '\0')
-		{
 			break;
-		}
-
 		i++;
-
 	}
-
-	return (y);
+	return (c);
 }
