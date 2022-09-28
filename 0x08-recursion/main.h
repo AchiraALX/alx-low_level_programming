@@ -19,6 +19,7 @@ int prime_helper(int n, int i);
 int _sqrt(int x, int i);
 int is_palindrome(char *s);
 int is_palindrome_helper(char *s, int i, int j);
+int _strlen_recursion(char *s);
 int my_pal(char *s, int l);
 int wildcmp(char *s1, char *s2);
 int findsrc(char *s, char c, int i, int p);
