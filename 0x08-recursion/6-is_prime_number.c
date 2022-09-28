@@ -25,7 +25,7 @@ int is_prime_number(int n)
  * Return: 1 if n is prime, 0 otherwise
  */
 
-int prime_helper(int n, int i);
+int prime_helper(int n, int i)
 {
 	if (i * i > n)
 		return (1);
