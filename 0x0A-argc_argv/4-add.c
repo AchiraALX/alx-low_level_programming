@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,18 +13,18 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, i;
-	char *x;
+	int total, i;
+	char *p;
 	int num;
 
-	sum = 0;
+	total = 0;
 	if (argc > 1)
 	{
 		for (i = 1; argv[i]; i++)
 		{
 			num = strtol(argv[i], &p, 10);
-			if (!*x)
-				sum += num;
+			if (!*p)
+				total += num;
 			else
 			{
 				printf("Error\n");
@@ -31,6 +32,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	printf("%d\n", sum);
+	printf("%d\n", total);
 	return (0);
 }
