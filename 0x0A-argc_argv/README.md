@@ -24,4 +24,3 @@
 ## Task 4
 
 <p> A program that adds positive numbers. </p>
-This is the alx 0x09-static_libraries project.
