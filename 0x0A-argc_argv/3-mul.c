@@ -14,20 +14,15 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, product;
 	(void) argc;
 
-	if (argc != 3)
+	if (argv[1] && argv[2])
 	{
-		printf("Error while getting the product");
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		return (0);
 	}
 	else
-	{
-		i = atoi(argv[i]);
-		j = atoi(argv[j]);
-		product = i * j;
-		printf("%d\n", product);
-	}
+		printf("Error\n");
 
-	return (0);
+	return (1);
 }
