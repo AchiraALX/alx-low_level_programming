@@ -15,6 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int i, j, product;
+	(void) argc;
 
 	if (argc != 3)
 	{
