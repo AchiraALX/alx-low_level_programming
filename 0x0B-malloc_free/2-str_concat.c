@@ -14,13 +14,13 @@ char *str_concat(char *s1, char *s2)
 {
 	char *s;
 	int i, j, len1, len2;
-	
+
 	/* if either s1 or s2 is NULL, treat it as an empty string */
 	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-	
+
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		;
 	}
-	
+
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 	{
 		;
