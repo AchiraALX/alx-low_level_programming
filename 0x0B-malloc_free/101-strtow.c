@@ -58,7 +58,7 @@ char **strtow(char *str)
 				free(words);
 				return (NULL);
 			}
-			for {j = 0; j < len; j++)
+			for (j = 0; j < len; j++)
 			{
 				words[k][j] = str[i + j];
 			}
