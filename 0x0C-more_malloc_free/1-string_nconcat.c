@@ -10,7 +10,7 @@
  * Return: pointer to concatenated string
  */
 
-void *string_concat(char *s1, char *s2)
+void *string_nconcat(char *s1, char *s2)
 {
 	char *s;
 	int i, j, k, l;
