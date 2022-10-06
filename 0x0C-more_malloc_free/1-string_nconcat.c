@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * string_concat - concatenates two strings
+ * string_nconcat - concatenates two strings
  *
  * @s1: first string to concatenate
  *
  * @s2: second string to concatenate
+ *
+ * @n: number of bytes to concatenate from s2
  *
  * Return: pointer to concatenated string
  */
@@ -13,7 +15,7 @@
 void *string_nconcat(char *s1, char *s2)
 {
 	char *s;
-	int i, j, k, l;
+	unsigned int i, j, k, l;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -21,23 +23,27 @@ void *string_nconcat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (k = 0; s1[k] != '\0'; k++)
 		;
 
-	for (j = 0; s2[j] != '\0'; j++)
+	for (l = 0; s2[l] != '\0'; l++)
 		;
 
-	s = malloc(sizeof(char) * (i + j + 1));
+	if (n >= l)
+		n = l;
+
+	s = malloc(sizeof(char) * (k + n + 1));
+
 	if (s == NULL)
 		return (NULL);
 
-	for (k = 0; k < i; k++)
+	for (i = 0; i < k; i++)
 		s[k] = s1[k];
 
-	for (l = 0; l < j; l++)
-		s[k + l] = s2[l];
+	for (j = 0; j < n; j++)
+		s[j + i] = s2[j];
 
-	s[k + l] = '\0';
+	s[i + j] = '\0';
 
 	return (s);
 }
