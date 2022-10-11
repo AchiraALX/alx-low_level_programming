@@ -1,0 +1,143 @@
+cmake_minimum_required(VERSION 3.23)
+project(alx_low_level_programming C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(0x02-functions_nested_loops)
+include_directories(0x03-debugging)
+include_directories(0x04-more_functions_nested_loops)
+include_directories(0x05-pointers_arrays_strings)
+include_directories(0x06-pointers_arrays_strings)
+include_directories(0x07-pointers_arrays_strings)
+include_directories(0x08-recursion)
+include_directories(0x09-static_libraries)
+include_directories(0x0A-argc_argv)
+include_directories(0x0B-malloc_free)
+include_directories(0x0C-more_malloc_free)
+include_directories(0x0D-preprocessor)
+
+add_executable(alx_low_level_programming
+        0x00-hello_world/4-puts.c
+        0x00-hello_world/5-printf.c
+        0x00-hello_world/6-size.c
+        0x01-variables_if_else_while/0-positive_or_negative.c
+        0x01-variables_if_else_while/1-last_digit.c
+        0x01-variables_if_else_while/2-print_alphabet.c
+        0x01-variables_if_else_while/3-print_alphabets.c
+        0x01-variables_if_else_while/4-print_alphabt.c
+        0x01-variables_if_else_while/5-print_numbers.c
+        0x01-variables_if_else_while/6-print_numberz.c
+        0x01-variables_if_else_while/7-print_tebahpla.c
+        0x01-variables_if_else_while/8-print_base16.c
+        0x01-variables_if_else_while/9-print_comb.c
+        0x02-functions_nested_loops/0-putchar.c
+        0x02-functions_nested_loops/1-alphabet.c
+        0x02-functions_nested_loops/10-add.c
+        0x02-functions_nested_loops/11-print_to_98.c
+        0x02-functions_nested_loops/2-print_alphabet_x10.c
+        0x02-functions_nested_loops/3-islower.c
+        0x02-functions_nested_loops/4-isalpha.c
+        0x02-functions_nested_loops/5-sign.c
+        0x02-functions_nested_loops/6-abs.c
+        0x02-functions_nested_loops/7-print_last_digit.c
+        0x02-functions_nested_loops/8-24_hours.c
+        0x02-functions_nested_loops/9-times_table.c
+        0x02-functions_nested_loops/_putchar.c
+        0x02-functions_nested_loops/main.h
+        0x03-debugging/0-main.c
+        0x03-debugging/main.h
+        0x04-more_functions_nested_loops/0-isupper.c
+        0x04-more_functions_nested_loops/1-isdigit.c
+        0x04-more_functions_nested_loops/10-print_triangle.c
+        0x04-more_functions_nested_loops/100-prime_factor.c
+        0x04-more_functions_nested_loops/101-print_number.c
+        0x04-more_functions_nested_loops/2-mul.c
+        0x04-more_functions_nested_loops/3-print_numbers.c
+        0x04-more_functions_nested_loops/4-print_most_numbers.c
+        0x04-more_functions_nested_loops/5-more_numbers.c
+        0x04-more_functions_nested_loops/6-print_line.c
+        0x04-more_functions_nested_loops/7-print_diagonal.c
+        0x04-more_functions_nested_loops/8-print_square.c
+        0x04-more_functions_nested_loops/9-fizz_buzz.c
+        0x04-more_functions_nested_loops/main.h
+        0x05-pointers_arrays_strings/0-reset_to_98.c
+        0x05-pointers_arrays_strings/1-swap.c
+        0x05-pointers_arrays_strings/2-strlen.c
+        0x05-pointers_arrays_strings/3-puts.c
+        0x05-pointers_arrays_strings/4-print_rev.c
+        0x05-pointers_arrays_strings/5-rev_string.c
+        0x05-pointers_arrays_strings/6-puts2.c
+        0x05-pointers_arrays_strings/7-puts_half.c
+        0x05-pointers_arrays_strings/8-print_array.c
+        0x05-pointers_arrays_strings/9-strcpy.c
+        0x05-pointers_arrays_strings/main.h
+        0x06-pointers_arrays_strings/0-strcat.c
+        0x06-pointers_arrays_strings/1-strncat.c
+        0x06-pointers_arrays_strings/100-main.c
+        0x06-pointers_arrays_strings/101-main.c
+        0x06-pointers_arrays_strings/101-print_number.c
+        0x06-pointers_arrays_strings/2-strncpy.c
+        0x06-pointers_arrays_strings/3-main.c
+        0x06-pointers_arrays_strings/3-strcmp.c
+        0x06-pointers_arrays_strings/4-main.c
+        0x06-pointers_arrays_strings/4-rev_array.c
+        0x06-pointers_arrays_strings/5-main.c
+        0x06-pointers_arrays_strings/5-string_toupper.c
+        0x06-pointers_arrays_strings/6-cap_string.c
+        0x06-pointers_arrays_strings/6-main.c
+        0x06-pointers_arrays_strings/7-leet.c
+        0x06-pointers_arrays_strings/7-main.c
+        0x06-pointers_arrays_strings/main.h
+        0x07-pointers_arrays_strings/0-memset.c
+        0x07-pointers_arrays_strings/1-memcpy.c
+        0x07-pointers_arrays_strings/100-set_string.c
+        0x07-pointers_arrays_strings/2-strchr.c
+        0x07-pointers_arrays_strings/3-strspn.c
+        0x07-pointers_arrays_strings/4-strpbrk.c
+        0x07-pointers_arrays_strings/5-strstr.c
+        0x07-pointers_arrays_strings/7-print_chessboard.c
+        0x07-pointers_arrays_strings/8-print_diagsums.c
+        0x07-pointers_arrays_strings/main.h
+        0x08-recursion/0-puts_recursion.c
+        0x08-recursion/1-print_rev_recursion.c
+        0x08-recursion/100-is_palindrome.c
+        0x08-recursion/101-wildcmp.c
+        0x08-recursion/2-strlen_recursion.c
+        0x08-recursion/3-factorial.c
+        0x08-recursion/4-pow_recursion.c
+        0x08-recursion/5-sqrt_recursion.c
+        0x08-recursion/6-is_prime_number.c
+        0x08-recursion/_putchar.c
+        0x08-recursion/main.h
+        0x08-recursion/me.c
+        0x09-static_libraries/_putchar.c
+        0x09-static_libraries/main.c
+        0x09-static_libraries/main.h
+        0x0A-argc_argv/0-whatsmyname.c
+        0x0A-argc_argv/1-args.c
+        0x0A-argc_argv/100-change.c
+        0x0A-argc_argv/2-args.c
+        0x0A-argc_argv/3-mul.c
+        0x0A-argc_argv/4-add.c
+        0x0A-argc_argv/_putchar.c
+        0x0A-argc_argv/main.h
+        0x0A-argc_argv/starting.c
+        0x0B-malloc_free/0-create_array.c
+        0x0B-malloc_free/1-strdup.c
+        0x0B-malloc_free/100-argstostr.c
+        0x0B-malloc_free/101-strtow.c
+        0x0B-malloc_free/2-str_concat.c
+        0x0B-malloc_free/3-alloc_grid.c
+        0x0B-malloc_free/4-free_grid.c
+        0x0B-malloc_free/_putchar.c
+        0x0B-malloc_free/main.h
+        0x0C-more_malloc_free/0-malloc_checked.c
+        0x0C-more_malloc_free/1-main.c
+        0x0C-more_malloc_free/1-string_nconcat.c
+        0x0C-more_malloc_free/2-calloc.c
+        0x0C-more_malloc_free/2-main.c
+        0x0C-more_malloc_free/3-array_range.c
+        0x0C-more_malloc_free/3-main.c
+        0x0C-more_malloc_free/main.h
+        0x0D-preprocessor/0-object_like_macro.h
+        0x0D-preprocessor/1-pi.h)
