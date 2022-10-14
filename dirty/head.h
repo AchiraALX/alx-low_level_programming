@@ -6,7 +6,6 @@
 #include <math.h>
 #include <stdarg.h>
 #include <string.h>
-#include <varargs.h>
 
 double f_c(double set);
 float poly(float x);
