@@ -1,0 +1,33 @@
+* {
+        box-sizing: border-box;
+        transition-duration: .4s;
+}
+
+body, html {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+}
+
+main {
+        flex: 1 0 auto;
+}
+
+#g_container {
+        margin: 10px auto;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        height: 80vh;
+        width: 90vw;
+        background-color: aquamarine;
+        position: relative;
+        padding: 15px;
+}
+
+.navbar-toggler {
+        background-color: aquamarine;
+        border: 2px solid cyan;
+        border-radius: 10px;
+}

@@ -19,7 +19,7 @@ int main(void)
     for (n = 1; n <= 10; ++n)
     {
         triangularNumber += n;
-        printf(" %i \t\t\t\t %i\n", n, triangularNumber);
+        printf("%2i \t\t\t\t %2i\n", n, triangularNumber);
     }
 
     return (0);

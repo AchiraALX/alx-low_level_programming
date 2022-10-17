@@ -15,6 +15,10 @@ include_directories(0x0A-argc_argv)
 include_directories(0x0B-malloc_free)
 include_directories(0x0C-more_malloc_free)
 include_directories(0x0D-preprocessor)
+include_directories(0x0E-structures_typedef)
+include_directories(0x0F-function_pointers)
+include_directories(0x10-variadic_functions)
+include_directories(dirty)
 
 add_executable(alx_low_level_programming
         0x00-hello_world/4-puts.c
@@ -140,4 +144,36 @@ add_executable(alx_low_level_programming
         0x0C-more_malloc_free/3-main.c
         0x0C-more_malloc_free/main.h
         0x0D-preprocessor/0-object_like_macro.h
-        0x0D-preprocessor/1-pi.h)
+        0x0D-preprocessor/1-pi.h
+        0x0D-preprocessor/2-main.c
+        0x0D-preprocessor/3-function_like_macro.h
+        0x0D-preprocessor/3-main.c
+        0x0D-preprocessor/4-sum.h
+        0x0D-preprocessor/4-main.c
+        0x0E-structures_typedef/0-init_dog.c
+        0x0E-structures_typedef/1-print_dog.c
+        0x0E-structures_typedef/1-main.c
+        0x0E-structures_typedef/2-main.c
+        0x0E-structures_typedef/2-new_dog.c
+        0x0E-structures_typedef/4-main.c
+        0x0E-structures_typedef/4-new_dog.c
+        0x0E-structures_typedef/5-main.c
+        0x0E-structures_typedef/5-free_dog.c
+        0x0F-function_pointers/0-main.c
+        0x0F-function_pointers/0-print_name.c
+        0x0F-function_pointers/2-int_index.c
+        0x0F-function_pointers/1-array_iterator.c
+        0x0F-function_pointers/1-main.c
+        0x0F-function_pointers/2-main.c
+        0x0F-function_pointers/3-calc.h
+        0x0F-function_pointers/3-main.c
+        0x0F-function_pointers/3-op_functions.c
+        0x0F-function_pointers/3-get_op_func.c
+        0x0F-function_pointers/100-main_opcodes.c
+        dirty/varr.c
+        dirty/var1.c
+        dirty/cons.c
+        0x10-variadic_functions/0-sum_them_all.c
+        0x10-variadic_functions/variadic_functions.h
+        0x10-variadic_functions/0-main.c
+        0x10-variadic_functions/1-print_numbers.c 0x10-variadic_functions/1-main.c 0x10-variadic_functions/2-print_strings.c 0x10-variadic_functions/2-main.c 0x10-variadic_functions/3-print_all.c 0x10-variadic_functions/3-main.c)

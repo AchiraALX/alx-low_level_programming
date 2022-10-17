@@ -6,10 +6,15 @@
 #include <math.h>
 #include <stdarg.h>
 #include <string.h>
+#include <stdbool.h>
 
 double f_c(double set);
 float poly(float x);
 float ex_r(void);
 int next(int i, int j);
+int gcd(void);
+int factorial(int f);
+int failing_grades(int numberOfGrades);
+float operator(float accumulator, char operator, float operand);
 
 #endif /* HEAD_H */
