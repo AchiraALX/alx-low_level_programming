@@ -16,32 +16,43 @@
  * Return: Always (0) Success
 */
 
-int first_int(int num);
+char *first_int(int num);
 char *check_num(int num);
 
 int main(void)
 {
-        int number;
-        char *s;
+        int number, i = 0;
+        char *s, *se;
 
         printf("Enter number: ");
         scanf("%i", &number);
 
-        number = first_int(number);
-
-        s = check_num(number);
-        printf("%s \n %i", s, number);
+        s = first_int(number);
+        for (i = 0; s[i] != '\0'; i++)
+        {
+		if (s[i] == '0')
+		{
+			printf("zero");
+			continue;
+		}
+		else
+		{
+			se = check_num(s[i]);
+                	printf("%s ", se);
+		}
+        }
 
         return (0);
 }
 
-int first_int(int num)
+char *first_int(int num)
 {
-        num = num / 10;
+	int len = snprintf(NULL, 0, "%d", num);
+	char *str = malloc(len + 1);
+        snprintf(str, len + 1, "%d", num);
 
-        return num;
+        return (str);
 }
-
 /**
  * check_num - checks a number and give it appropriate english name
  * 
@@ -54,48 +65,44 @@ char *check_num(int num)
 
         switch (num)
         {
-        case 0:
-                en_name = "zero ";
+        case '1':
+                en_name = "one";
                 break;
 
-        case 1:
-                en_name = "one ";
+        case '2':
+                en_name = "two";
                 break;
 
-        case 2:
-                en_name = "two ";
+        case '3':
+                en_name = "three";
                 break;
 
-        case 3:
-                en_name = "three ";
+        case '4':
+                en_name = "four";
                 break;
 
-        case 4:
-                en_name = "four ";
+        case '5':
+                en_name = "five";
                 break;
 
-        case 5:
-                en_name = "five ";
+        case '6':
+                en_name = "six";
                 break;
 
-        case 6:
-                en_name = "six ";
+        case '7':
+                en_name = "seven";
                 break;
 
-        case 7:
-                en_name = "seven ";
+        case '8':
+                en_name = "eight";
                 break;
 
-        case 8:
-                en_name = "eight ";
-                break;
-
-        case 9:
-                en_name = "nine ";
+        case '9':
+                en_name = "nine";
                 break;
 
         default:
-                en_name = "unknown case ";
+                en_name = "unknown case";
                 break;
         }
 
