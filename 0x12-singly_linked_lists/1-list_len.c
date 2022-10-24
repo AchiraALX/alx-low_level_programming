@@ -4,7 +4,7 @@
  * list_len - get the number of elements in list_t
  *
  * @h: pointer to list_t
- *  
+ *
  * Return: number of elements
 */
 
