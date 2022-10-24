@@ -1,12 +1,12 @@
-#include "limits.h"
+#include "lists.h"
 
 /**
- * list_len - get the number of elements in list_t
+ * list_len - returns the number of elements in a linked list_t list
  *
- * @h: pointer to list_t
+ * @h: pointer to the list
  *
- * Return: number of elements
-*/
+ * Return: number of nodes
+ */
 
 size_t list_len(const list_t *h)
 {
