@@ -1,7 +1,6 @@
 #include <stdarg.h>
+#include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 static int _printf(const char *format, ...)
 
@@ -50,5 +49,6 @@ int main(void)
         _printf("Hello %s %s %s %s %s\n", "World", "Again", "Again", "Again", "Again");
         _printf("Hi%s I am %d years old\n", " there", 25);
         _printf("Hi%s I am %i years old\n", " there", 25);
+        _printf("%c %c \n", 'j', '2');
         return (0);
 }

@@ -45,9 +45,16 @@ int main(void)
         return (0);
 }
 
+/**
+ * first_int - converts the type int passed in to a array of characters
+ * 
+ * Return: array of characters
+*/
+
 char *first_int(int num)
 {
 	int len = snprintf(NULL, 0, "%d", num);
+        /* Creates memory for the terminator by adding one byte of the heap */
 	char *str = malloc(len + 1);
         snprintf(str, len + 1, "%d", num);
 
@@ -65,45 +72,45 @@ char *check_num(int num)
 
         switch (num)
         {
-        case '1':
-                en_name = "one";
-                break;
+                case '1':
+                        en_name = "one";
+                        break;
 
-        case '2':
-                en_name = "two";
-                break;
+                case '2':
+                        en_name = "two";
+                        break;
 
-        case '3':
-                en_name = "three";
-                break;
+                case '3':
+                        en_name = "three";
+                        break;
 
-        case '4':
-                en_name = "four";
-                break;
+                case '4':
+                        en_name = "four";
+                        break;
 
-        case '5':
-                en_name = "five";
-                break;
+                case '5':
+                        en_name = "five";
+                        break;
 
-        case '6':
-                en_name = "six";
-                break;
+                case '6':
+                        en_name = "six";
+                        break;
 
-        case '7':
-                en_name = "seven";
-                break;
+                case '7':
+                        en_name = "seven";
+                        break;
 
-        case '8':
-                en_name = "eight";
-                break;
+                case '8':
+                        en_name = "eight";
+                        break;
 
-        case '9':
-                en_name = "nine";
-                break;
+                case '9':
+                        en_name = "nine";
+                        break;
 
-        default:
-                en_name = "unknown case";
-                break;
+                default:
+                        en_name = "unknown case";
+                        break;
         }
 
         return en_name;
