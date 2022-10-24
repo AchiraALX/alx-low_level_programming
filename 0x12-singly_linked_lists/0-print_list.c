@@ -2,9 +2,9 @@
 
 /**
  * print_lists - prints all the elements of a list_t list
- * 
+ *
  * @h: pointer to the list
- * 
+ *
  * Return: number of nodes
  */
 
