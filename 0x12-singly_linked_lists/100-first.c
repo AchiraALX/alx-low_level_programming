@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * start_up - function that prints a string before the main function is executed
+ * start_up - function that prints a string before 
+ * the main function is executed
  *
  * Return: nothing
  */
