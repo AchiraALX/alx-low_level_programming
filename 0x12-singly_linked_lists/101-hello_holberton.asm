@@ -1,10 +1,16 @@
-global_start
-
 section .text
+	global _start
 
 _start:
-	mov rax, 1	;	write(
-	mov rdi, 1	;	STDOUT_FILENO,
-	mov rsi, msg	;	"Hello, Holberton\n",
-	mov rdx, msglen	;	sizeof("Hello, Holberton\n")
-	syscall		; );
+	mov edx,len
+	mov ecx,msg
+	mov ebx,1
+	mov eax,4
+	int 0x80
+
+	mov eax,1
+	int 0x80
+
+section .data
+msg db 'Hello, Holberton!',0xa
+len equ $-msg
