@@ -29,6 +29,7 @@ int main(void)
                 if (response < 0 || response > max_rating)
                 {
                         printf("Bad response: %i\n", response);
+			++number_of_responses;
                 }
                 else
                 {

@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	int i, numFibs = 30;
+	int i, numFibs;
 
 	/* get input */
 	printf("Enter n number 1 - 75:  \n ");
-	/* scanf("%lu", &numFibs); */
+	scanf("%lu", &numFibs);
 
 	/* check if the input is greater than 75 or less than 1 */
 	if (numFibs < 1 || numFibs > 75)
@@ -32,7 +32,7 @@ int main(void)
 
 	for (i = 0; i < numFibs; ++i)
 	{
-		printf("%llu ", fib[i]);
+		printf("%lu ", fib[i]);
 	}
 
 	printf("\n");
