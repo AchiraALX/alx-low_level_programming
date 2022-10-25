@@ -9,10 +9,6 @@ _start:
 	mov rdx, msglen	;	sizeof("Hello, Holberton\n")
 	syscall		; );
 
-	mov rax, 60	;	exit(
-	mov rdi, 0	;	EXIT_SUCCESS
-	syscall		; );
-
 section .data
 msg:	db "Hello, Holberton\n"
 msglen:	equ $ - msg
