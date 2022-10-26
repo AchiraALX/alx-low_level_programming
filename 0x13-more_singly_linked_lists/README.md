@@ -6,7 +6,7 @@
 
 Write a function that prints all the elements of a listint_t list.
 
-- Prototype: `size_t print_listint(const listint_t \*h);`
+- Prototype: `size_t print_listint(const listint_t *h);`
 - Return: the number of nodes
 - You are allowed to use `printf`
 
@@ -14,7 +14,7 @@ Write a function that prints all the elements of a listint_t list.
 
 A function that returns number of elements in a linked list `listint_t`
 
-- Prototype: `size_t listint_len(const list_int \*h);`
+- Prototype: `size_t listint_len(const list_int *h);`
 
 ### 2. Add node
 
@@ -46,7 +46,7 @@ A function that frees a `listint_t` list
 
 A function that deletes the head node of a `listint_t` linked list, and returns the head node's data (n)
 
-- Prototype: `int pop_listint(listint_t \*\*head);`
+- Prototype: `int pop_listint(listint_t **head);`
 - If the linked list is empty return `0`
 
 ### 7. Get node at index
@@ -61,7 +61,7 @@ A function that returns the nth node of a `listint_t` linked list
 
 A function that returns the sum of all data (n) of a linked list `listint_t`
 
-- Prototype: `int sum_listint(listint_t \*head);`
+- Prototype: `int sum_listint(listint_t *head);`
 - If the list is empty, return `0`
 
 ### 9. Insert
@@ -77,6 +77,6 @@ A function that inserts a new node at a given position
 
 A function that deletes the node at index `index` of a `listint_t` linked list
 
-- Prototype: `int delete_nodeint_at_index(listint_t \*\*head, unsigned int index);`
+- Prototype: `int delete_nodeint_at_index(listint_t **head, unsigned int index);`
 - where index is the index of the node to be deleted starting from `0`
 - Return 1 if it succeeded and -1 if it  failed.
