@@ -16,6 +16,10 @@ int main(void)
 		for (i = 0; i < j; ++i)
 		{
 			numbers[j] += numbers[i];
+			/**
+			 * j = 1;
+			 * i = 1?
+			 */
 		}
 	}
 
