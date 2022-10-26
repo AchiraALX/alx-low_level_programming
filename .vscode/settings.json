@@ -1,7 +1,9 @@
 {
         "cSpell.words": [
                 "alx's",
-                "msglen"
+                "listint",
+                "msglen",
+                "nodeint"
         ],
         "python.testing.unittestArgs": [
                 "-v",
