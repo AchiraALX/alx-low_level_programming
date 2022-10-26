@@ -2,8 +2,8 @@
 
 /**
  * free_listint - frees a listint_t list
- * 
- *@head: pointer to the list
+ *
+ * @head: pointer to the list
  *
  * Return: void
 */
