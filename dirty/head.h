@@ -7,6 +7,10 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+#define N 10
 
 double f_c(double set);
 float poly(float x);
