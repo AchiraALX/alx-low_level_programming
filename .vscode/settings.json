@@ -4,7 +4,8 @@
                 "listint",
                 "malloc",
                 "msglen",
-                "nodeint"
+                "nodeint",
+                "textfile"
         ],
         "python.testing.unittestArgs": [
                 "-v",

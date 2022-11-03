@@ -7,7 +7,7 @@ int main(void)
 
         *p++;
 
-        printf("%i\n", *p);
+        printf("%p\n", p);
 
         return (0);
 }

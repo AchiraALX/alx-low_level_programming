@@ -2,7 +2,7 @@
 
 /**
  * absoluteValue - gets the absolute value of number x
- * 
+ *
  * Return: absolute value
 */
 
