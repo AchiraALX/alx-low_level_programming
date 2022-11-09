@@ -1,6 +1,12 @@
 {
         "cSpell.words": [
+                "ABIVERSION",
                 "alx's",
+                "Ehdr",
+                "ELFCLASS",
+                "ELFDATA",
+                "ELFMAG",
+                "ELFOSABI",
                 "listint",
                 "malloc",
                 "msglen",

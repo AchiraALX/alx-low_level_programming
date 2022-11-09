@@ -6,7 +6,7 @@
  * Return: void
 */
 
-void g_c_d(int u, int v)
+int g_c_d(int u, int v)
 {
 	int temp;
 
@@ -19,12 +19,16 @@ void g_c_d(int u, int v)
 		v = temp;
 	}
 
-	printf("%i\n", u);
+	return (temp);
 }
 
 int main(void)
 {
-	g_c_d(10, 15);
+	int g_cd;
+
+	g_cd = g_c_d(3, 5);
+
+	printf("%i\n", g_cd);
 
 	return (0);
 }

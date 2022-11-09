@@ -24,7 +24,7 @@ int main(void)
 	{
 		scanf("%i", &response);
 
-		if ((response < 0 && response != 999) || response > max_rating)
+		if (response < 0 || response > max_rating)
 		{
 			printf("Bad response: %i\n", response);
 		}
