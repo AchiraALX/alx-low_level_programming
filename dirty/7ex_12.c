@@ -14,25 +14,17 @@
 
  int main (void)
  {
-	 int matrix[5][5] = {
-		 { 1, 2, 3, 4, 5 },
-		 { 2, 3, 4, 5, 1 },
+	 int tst[5];
+	 size_t i;
+
+	 int matrix[4][5] = {
+		 { 1, 7, 3, 4, 5 },
+		 { 6, 3, 4, 5, 1 },
 		 { 3, 4, 5, 1, 2 },
 		 { 4, 5, 1, 2, 3 },
-		 { 5, 1, 2, 3, 4 }
 	 };
 
-	 int set_matrix[5][5] = transpose_matrix(matrix, 5, 5);
-
-	 for (i = 0; i < 5; ++i)
-	 {
-		 for (j = 0; j < 5; ++j)
-		 {
-			 printf("%i ", set_matrix[i][j]);
-		 }
-
-		 printf("\n");
-	 }
+	 transpose_matrix(4, 5, matrix);
 
 	 return (0);
  }

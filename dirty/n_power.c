@@ -1,6 +1,6 @@
 /**
  * CHALLENGE
- * 
+ *
  * Trying my curiosity
 */
 
@@ -65,35 +65,33 @@ int square(int set_x)
 
 long int power(int set_x, unsigned int set_y)
 {
+	if (set_y == 0)
+	{
+		return (1);
+	}
 
-  if (set_y == 0)
-  {
-    return (1);
-  }
+	if (set_y == 1)
+	{
+		return set_x;
+	}
 
-  if (set_y == 1)
-  {
-    return set_x;
-  }
+	int set_y_rem = set_y % 2;
+	set_y /= 2;
+	long long unsigned int set_z;
+	unsigned int i = 0;
 
-  int set_y_rem = set_y % 2;
-  set_y /= 2;
-  long long unsigned int set_z;
-  unsigned int i = 0;
+	set_z = square(set_x);
 
-  set_z = square(set_x);
+	for (i = 0; i < set_y - 1; i++) {
+		set_z = mult(set_z, square(set_x));
+		set_z = set_z;
+	}
 
-  for (i = 0; i < set_y - 1; i++) {
-    set_z = mult(set_z, square(set_x));
-    set_z = set_z;
-  }
+	if (set_y_rem == 1) {
+		set_z = mult(set_z, set_x);
+	}
 
-  if (set_y_rem == 1) {
-    set_z = mult(set_z, set_x);
-  }
-
-  return set_z;
-
+	return set_z;
 }
 
 /**
@@ -104,17 +102,17 @@ long int power(int set_x, unsigned int set_y)
 
 int main(void)
 {
-  int set_x;
-  unsigned int set_y;
+	int set_x;
+	unsigned int set_y;
 
-  printf("%s", "Enter n base number : ");
-  scanf("%i", &set_x);
-  printf("%s", "Enter n power : ");
-  scanf("%u", &set_y);
+	printf("%s", "Enter n base number : ");
+	scanf("%i", &set_x);
+	printf("%s", "Enter n power : ");
+	scanf("%u", &set_y);
 
-  long long unsigned int my_z = power(set_x, set_y);
+	long long unsigned int my_z = power(set_x, set_y);
 
-  printf("%lu\n", my_z);
+	printf("%lu\n", my_z);
 
-  return (0);
+	return (0);
 }

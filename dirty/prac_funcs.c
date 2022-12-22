@@ -89,7 +89,7 @@
  };
 
  /**
-  * time_update - finds ne time up
+  * time_update - finds time up
   *
   * @now: time now
   *
@@ -118,3 +118,106 @@
 
 	  return (now);
   }
+
+/**
+ * concat - concats two strings
+ *
+ * @result: resultant string
+ *
+ * @str1: first string
+ *
+ * @n1: the length of the first string
+ *
+ * @str2: second string
+ *
+ * n2: the length of the second string
+ */
+
+ void concat(char result[], const char str1[], int n1, const char str2[], int n2)
+ {
+	 for (i = 0; i < n1; ++i)
+	 {
+		 result[i] = str1[i];
+	 }
+	 for (j = 0; j < n2; ++j)
+	 {
+		 result[n1 + j] = str2[j];
+	 }
+ }
+
+/**
+ * string_length - gets the length of character string
+ *
+ * @string: the string
+ *
+ * Return: lenth of a string
+ */
+
+ int string_length (const char string[])
+{
+	int count = 0;
+	while ( string[count] != '\0' )
+	{
+		++count;
+	}
+
+	 return (count);
+ }
+
+/**
+ * concat_r - concatenates two strings
+ *
+ * @str1: the first string
+ *
+ * @str2: the second string
+ *
+ * @result: concatenated string
+ *
+ * Return: void
+ */
+
+ void concat_r(char result[], const char str1[], const char str2[])
+ {
+	 for (i = 0; str1[i] != '\0'; ++i)
+	 {
+		 result[i] = str1[i];
+	 }
+
+	 for (j = 0; str2[j] != '\0'; ++j)
+	 {
+		 result[i + j] = str2[j];
+	 }
+
+	 result[i + j] = '\0';
+ }
+
+/**
+ * equal_strings - compares two strings
+ *
+ * @s1: first string
+ *
+ * @s2: second string
+ *
+ * Return: true if the two string are the same and false if otherwise
+ */
+
+ bool equal_strings(const char s1[], const char s2[])
+ {
+	 bool are_equal;
+
+	 while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	 {
+	 	++i;
+	 }
+
+	 if (s1[i] == '\0' && s2[i] == '\0')
+	 {
+		 are_equal = true;
+	 }
+	 else
+	 {
+		 are_equal = false;
+	 }
+
+	 return (are_equal);
+ }

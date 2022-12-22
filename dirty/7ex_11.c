@@ -15,6 +15,10 @@
  * Return: Always (0) Success
  */
 
+ /// @brief
+ /// @param
+ /// @return
+
  int main (void)
  {
 	 size_t set_array[10], i, set_sum;
@@ -32,9 +36,10 @@
 		 printf("%i ", set_array[i]);
 	 }
 
-	 array[10] = {2, 1, 3, 5, 6, 3, 7, 8, 9, 5};
-	 nt sum = array_sum(array, 10);
+	 printf("Sum = %i \n%s\n", set_sum, "End");
+
+	 size_t array[10] = {2, 1, 3, 5, 6, 3, 7, 8, 9, 5};
+	 int sum = array_sum(array, 10);
    	 printf("Sum = %d\n", sum);
 
-	 printf("Sum = %i \n%s\n", set_sum, "End");
  }

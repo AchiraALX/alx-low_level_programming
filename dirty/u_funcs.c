@@ -290,28 +290,293 @@ int u_gcd(int u, int v)
 	 return (set_sum);
  }
 
+ /**
+  * transpose_matrix - transpose a matrix
+  *
+  * @matrix: matrix to be transposed
+  *
+  * Return: void
+  */
+
+  void transpose_matrix(int row, int cols, int matrix[row][cols])
+  {
+	  size_t i, j;
+	  int row_to_col[5][4];
+
+	  for (i = 0; i < cols; ++i)
+	  {
+		  for (j = 0; j < row; ++j)
+		  {
+			  row_to_col[i][j] = matrix[j][i];
+		  }
+	  }
+
+	  for (i = 0; i < 5; ++i)
+	  {
+		  for (j = 0; j < 4; ++j)
+		  {
+		  	 printf("%i ", row_to_col[i][j]);
+		  }
+
+		  printf("\n");
+	  }
+  }
+
+  /**
+   * sort - sorts an array of integers in ascending order
+   *
+   * Return: Alway (0) Success
+  */
+
+  void sort(int set_array[], int set_n, int set_a)
+  {
+  	int j, i, temp;
+
+  	for (i = 0; i < set_n - 1; ++i)
+  	{
+  		for (j = i + 1; j < set_n; ++j)
+  		{
+  			if (set_a < 0)
+			{
+				if (set_array[i] < set_array[j])
+	  			{
+	  				temp = set_array[j];
+	  				set_array[j] = set_array[i];
+	  				set_array[i] = temp;
+	  			}
+  			}
+			else
+			{
+				if (set_a >= 0)
+				{
+					if (set_array[i] > set_array[j])
+		  			{
+		  				temp = set_array[j];
+		  				set_array[j] = set_array[i];
+		  				set_array[i] = temp;
+		  			}
+				}
+			}
+  		}
+  	}
+  }
+
+
+  /* GLOBAL VARIABLES */
+
+  int converted_number[64];
+  long int number_to_convert;
+  int base;
+  int digit = 0;
+
+  /**
+   * get_number_and_base - get the number to be converted and the
+   * base to be converted to from the user
+   *
+   * Return: void
+   */
+
+  void get_number_and_base(void)
+  {
+  	printf("%s\n", "Enter n number : ");
+  	scanf("%li", &number_to_convert);
+
+	do
+	{
+	  	printf("%s\n", "Enter base to convert to (2 - 16)");
+	  	scanf("%i", &base);
+
+	} while (base < 2 || base > 16);
+
+  	if (base < 2 || base > 16)
+  	{
+  		printf("%s\n", "Bad base - enter a number between 2 and 16");
+  		base = 10;
+  	}
+  }
+
+  /**
+   * convert_number - does calculation of changing the base
+   *
+   * Return: void
+   */
+
+  void convert_number(void)
+  {
+  	do
+  	{
+  		converted_number[digit] = number_to_convert % base;
+  		++digit;
+  		number_to_convert /= base;
+  	} while (number_to_convert != 0);
+  }
+
+  /**
+   * display_converted_number - displays the converted number in the
+   * correct sequence
+   *
+   * Return: void
+   */
+
+  void display_converted_number(void)
+  {
+  	const char base_digits[16] = {
+		'0', '1', '2', '3', '4', '5', '6', '7',
+		'8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+  	int next_digit;
+  	printf("%s", "Converted number = ");
+  	for (--digit; digit >= 0; --digit)
+  	{
+  		next_digit = converted_number[digit];
+  		printf("%c", base_digits[next_digit]);
+  	}
+
+  	printf("\n");
+  }
+
+  /**
+   * d_check - check if subtraction is possible between dates
+   *
+   * @n: initial date
+   *
+   * @t: date then
+   *
+   * Return: true if subtraction is possible, else False
+   */
+
+  bool d_check (struct date n, struct date t)
+  {
+  	if (t.year - n.year < 0)
+  	{
+  		return false;
+  	}
+  	else
+  	{
+  		if (n.month > t.month && t.year <= n.year)
+  		{
+  			return false;
+  		}
+  		else
+  		{
+  			if (n.day > t.day && n.month >= t.month && t.year <= n.year)
+  			{
+  				return false;
+  			}
+  			else
+  			{
+  				return true;
+  			}
+  		}
+  	}
+  }
+
+  /**
+   * day_difference - calculate number of days between dates
+   *
+   * @d_now: initial date
+   *
+   * @d_then: date to calculate to
+   *
+   * Return: number of days
+   */
+
+   int day_difference(struct date d_now, struct date d_then)
+   {
+	int init_day, days;
+
+  	if (d_check(d_now, d_then))
+  	{
+  		if (d_then.year - d_now.year > 0) {
+  			init_day = number_of_days(d_now) - d_now.day;
+  			days = 0;
+  			for (i = d_now.month + 1; i <= 12; ++i)
+  			{
+  				d_now.month += 1;
+  				days += number_of_days(d_now);
+  			}
+
+  			days += init_day;
+
+  			if (d_then.year != d_now.year)
+  			{
+  				for (i = d_then.month - 1; i > 0; --i)
+  				{
+  					d_then.month -= 1;
+  					days += number_of_days(d_then);
+  				}
+
+  				days += d_then.day;
+  			}
+
+  			if (d_then.year - d_now.year > 1)
+  			{
+  				for (i = d_now.year + 1; i < d_then.year; ++i)
+  				{
+  					d_now.year += 1;
+  					if (is_leap_year(d_now)) {
+  						days += 366;
+  					}
+  					else
+  					{
+  						days += 365;
+  					}
+  				}
+  			}
+  		}
+  		else
+  		{
+  			init_day = number_of_days(d_now) - d_now.day;
+  			days = 0;
+  			for (i = d_now.month + 1; i < d_then.month; ++i)
+  			{
+  				d_now.month += 1;
+  				days += number_of_days(d_now);
+  			}
+
+  			days += init_day;
+  		}
+  	}
+  	else
+  	{
+  		printf("False");
+  	}
+
+	return days;
+}
+
 /**
- * transpose_matrix - transforms an M[a, b] matrix
- * to N[b, a] matrix which is equal to M[a, b]
- * e.g a 5 by 4 matrix becomes a 4 * 5 matrix with
- * the same values
+ * date_check - validates the dates
  *
- * @set_matrix: matrix to be transposed
+ * @date: struct date type
  *
- * Return: transposed matrix
+ * Return: bool
  */
 
- int transpose_matrix(int matrix[][], int set_x, int set_y)
+ bool date_check (struct date d_t)
  {
-	 int i, j;
-
-	 for (i = 0; i < set_x; ++i)
+	 if (d_t.day > 31)
 	 {
-		 for (j = 0; j < set_y; ++j)
-		 {
-			 matrix[i][j] = matrix[j][i];
-		 }
+		 printf("%s\n", "ERROR. ", d_t.month, d_t.year);
+		 return false;
 	 }
+	 else
+	 {
+		 return true;
+	 }
+ }
 
-	 return (matrix);
+/**
+ * date - get the dates for calculation
+ *
+ * Return: date struct
+ */
+
+ struct date dates(void)
+ {
+	 struct date d_t;
+	 printf("%s", "Enter n date (mm - dd - yyyy) : ");
+	 scanf("%i - %i - %i", d_t.month, d_t.day, d_t.year);
+
+	 return d_t;
  }
