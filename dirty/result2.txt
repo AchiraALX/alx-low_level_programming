@@ -1,0 +1,5 @@
+Enter n number between 1 and 100:  
+You number is 50.00 
+Half of it is 25.00 
+Square it to get 2500.00
+Cube it to get 125000.00 

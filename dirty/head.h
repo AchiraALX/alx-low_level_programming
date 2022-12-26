@@ -30,6 +30,7 @@ struct time
 };
 
 /* exercise functions */
+FILE *open_file(const char *file, const char *mode);
 double f_c(double set);
 bool date_check (struct date d_t);
 int day_difference(struct date d_now, struct date d_then);

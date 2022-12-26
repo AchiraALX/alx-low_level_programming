@@ -55,37 +55,37 @@
 
 /**
  * date_update - the function takes today date of type struct
- * date and returns tommorow date, calculates tommorow's date
+ * date and returns tomorrow date, calculates tomorrow's date
  *
  * @d: date struct
  *
- * Return: tommorow date
+ * Return: tomorrow date
  */
 
  struct date date_update(struct date d)
  {
-	 struct date tommorow;
+	 struct date tomorrow;
 
 	 if (d.day != number_of_days (d))
 	 {
-	 	tommorow.day = d.day + 1;
-		tommorow.month = d.month;
-		tommorow.year = d.year;
+	 	tomorrow.day = d.day + 1;
+		tomorrow.month = d.month;
+		tomorrow.year = d.year;
 	 }
 	 else if (d.month == 12)
 	 {
-	 	tommorow.day = 1;
-		tommorow.month = 1;
-		tommorow.year = d.year + 1;
+	 	tomorrow.day = 1;
+		tomorrow.month = 1;
+		tomorrow.year = d.year + 1;
 	 }
 	 else
 	 {
-		 tommorow.day = 1;
-		 tommorow.month = d.month + 1;
-		 tommorow.year = d.year;
+		 tomorrow.day = 1;
+		 tomorrow.month = d.month + 1;
+		 tomorrow.year = d.year;
 	 }
 
-	 return (tommorow);
+	 return (tomorrow);
  };
 
  /**
@@ -120,7 +120,7 @@
   }
 
 /**
- * concat - concats two strings
+ * concat - concat two strings
  *
  * @result: resultant string
  *
@@ -150,7 +150,7 @@
  *
  * @string: the string
  *
- * Return: lenth of a string
+ * Return: length of a string
  */
 
  int string_length (const char string[])

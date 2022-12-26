@@ -1,6 +1,6 @@
 #include "head.h"
 
-/* funtions used */
+/* functions used */
 
 bool alphabetic (const char c);
 int count_words (const char string[]);
@@ -61,7 +61,7 @@ int count_words (const char string[])
  *
  * @c: character to be determined
  *
- * Return: true if the characteris and alphabet false otherwise
+ * Return: true if the character is and alphabet false otherwise
  */
 
 bool alphabetic (const char c)
