@@ -1,3 +1,5 @@
+#include "head.h"
+
 /**
  * is_alpha - checks if a character is an alphabet
  *
@@ -63,23 +65,70 @@ FILE *open_file(const char *file, const char * mode)
 }
 
 /**
- * file_length - gets the length of the specified file
+ * count_lines - counts the lines of a specified file
  *
- * @file: file to be determined
+ * @file: the file whose line are to be counted
  *
- * Return: int (length of the file)
-*/
+ * Return: int (number of lines)
+ */
 
-int file_length(const char * file)
+int count_lines(FILE *file)
 {
-	int count, c;
+	int c, count;
 
 	count = 0;
 
 	while ( (c = getc(file)) != EOF )
 	{
-		++count;
+		if (c == '\n')
+		{
+			count++;
+		}
 	}
 
-	return (count);
+	return count;
+}
+
+
+/**
+ * write_lines - writes line alternatively
+ *
+ * @file_1: first file
+ *
+ * @file_2: second file
+ *
+ * Return: 0 if success
+*/
+
+int write_lines(FILE *file_1, FILE *file_2, int lines)
+{
+	int c, b, d;
+	/* FILE *in_3; */
+
+	b = 0;
+	/* in_3 = open_file("middle.me", "w"); */
+
+	while (lines != 0)
+	{
+		while ( (c = getc(file_1)) != EOF && b == 0 )
+		{
+			printf("%c", c);
+			if (c == '\n')
+			{
+				b = 1;
+			}
+		}
+		while ( (d = getc(file_2)) != EOF && b == 1 )
+		{
+			printf("%c", d);
+			if (c == '\n')
+			{
+				b = 0;
+			}
+		}
+
+		--lines;
+	}
+
+	return (0);
 }

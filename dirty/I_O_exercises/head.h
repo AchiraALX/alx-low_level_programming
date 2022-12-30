@@ -8,6 +8,8 @@
 bool is_alpha(const char c);
 char low_to_upper(char c);
 FILE *open_file(const char *file, const char *mode);
-int file_length(const char *file);
+int count_lines(FILE *file);
+FILE *most_lines(FILE *file_1, FILE *file_2);
+int write_lines(FILE *file_1, FILE *file_2, int lines);
 
 #endif /* HEAD_H */
