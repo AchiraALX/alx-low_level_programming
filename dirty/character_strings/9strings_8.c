@@ -10,7 +10,7 @@ int main (void)
 {
 	char text[81];
 	int total_words = 0;
-	int countWords (const char string[]);
+	int count_words (const char string[]);
 	void read_line (char buffer[]);
 	bool end_of_text = false;
 
