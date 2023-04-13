@@ -1,53 +1,60 @@
 #include "search_algos.h"
 
 /**
- * binary_search - search for a value in a sorted
- * array of integers using binary search algorithm
- *
- * @array: pointer to the first element of the array
- * to search in
- * @size: size of the array
- * @value: value to search
- *
- * Return: index where value is located
+ * binary_search - binary search a ascending sorted array to find a value.
+ * No duplicates in array. Must print subarray each split.
+ * @array: pointer to first element in array to search in
+ * @size: number of elements in array
+ * @value: value to search for
+ * Return: index of matched value in array or -1 if error or not found
  */
-
 int binary_search(int *array, size_t size, int value)
 {
-    size_t left = 0;
-    size_t right = size - 1;
-    size_t mid;
+	int tmp;
+	size_t b = 0;
 
-    if (!array)
-    {
-        return (-1);
-    }
+	if (array == NULL || size == 0)
+		return (-1);
+	size--;
+	while (b <= size)
+	{
+		print_array(array, b, size);
 
-    while (left <= right)
-    {
-        printf("Searching in array: ");
-        for (mid = left; mid < right; mid++)
-        {
-            printf("%d ", array[mid]);
-        }
+		tmp = (size - b) / 2 + b;
+		if (array[tmp] == value)
+			return (tmp);
+		else if (array[tmp] < value)
+		{
+			if (size % 2 == 1)
+				b = tmp + 1;
+			else
+				b = tmp;
+		}
+		else
+		{
+			if (size % 2 == 1)
+				size = tmp;
+			else
+				size = tmp - 1;
+		}
+	}
+	return (-1);
+}
 
-        printf("%d\n", array[mid]);
-
-        mid = left + (right -left) / 2;
-
-        if (array[mid] == value)
-        {
-            return (value);
-        }
-        else if (array[mid] < value)
-        {
-            left = mid + 1;
-        }
-        else
-        {
-            right = mid - 1;
-        }
-    }
-
-    return (-1);
+/**
+ * print_array - print the current array given rules on format
+ * @array: array to print
+ * @inc: starting incrementer index
+ * @size: increment up to this size
+ */
+void print_array(int *array, size_t inc, size_t size)
+{
+	printf("Searching in array: ");
+	for (; inc <= size; inc++)
+	{
+		printf("%d", array[inc]);
+		if (inc < size)
+			printf(", ");
+	}
+	printf("\n");
 }
